@@ -134,3 +134,16 @@ The zip file will be extracted and will be read by the adapters and then moved i
 
 <figure><img src="../.gitbook/assets/image (13) (1).png" alt=""><figcaption></figcaption></figure>
 
+## Things to take care of while ingesting Data / Debugging:
+
+The date format should be correct. The accepted date format is DD/MM/YY
+
+Make sure the data that you are trying to upload in the system, pass all the foreign key constraint.
+
+Do the necessary changes in the script related to file name and folder name.
+
+Don’t try to re-upload the same data. It will append the new data not update. So one data file should be uploaded once.
+
+When you are uploading the data into the system, make sure we keep the connection alive with the server by having the focus on the terminal. If the connection will break with the server it will stop the data ingestion. Or you can use the screen option on the server for seamless data ingestion.
+
+If you have large data files and you want to break those data files for each month then you can use this script to break data files. Do the necessary changes in the script related to file name and folder name.
